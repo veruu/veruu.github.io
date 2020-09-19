@@ -1,0 +1,13 @@
+stages:
+  - deploy_pages
+
+deploy:
+  stage: deploy_pages
+  image: monachus/hugo
+  script:
+    - hugo
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH

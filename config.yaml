@@ -1,0 +1,27 @@
+baseURL: https://veruu.gitlab.io/things
+languageCode: en-us
+title: Naming Things Is Hard
+theme: papermod
+paginate: 100
+author: "Veronika Kabátová"
+
+params:
+  description: "veruu's blog"
+  author: "Veronika Kabátová"
+  contentTypeName: posts
+  ShowShareButtons: false
+  ShowReadingTime: true
+  comments: false
+  defaultTheme: dark
+
+  homeInfoParams:
+    Title: Naming Things Is Hard
+    Content: "Welcome to my blog!"
+
+  socialIcons:
+    - name: gitlab
+      url: "https://gitlab.com/veruu"
+    - name: github
+      url: "https://github.com/veruu"
+    - name: twitter
+      url: "https://twitter/veruukabatova"
