@@ -1,8 +1,8 @@
 stages:
-  - deploy_pages
+  - deploy
 
-deploy:
-  stage: deploy_pages
+pages:
+  stage: deploy
   image: monachus/hugo
   script:
     - hugo
