@@ -6,7 +6,7 @@ paginate: 100
 author: "Veronika Kabátová"
 
 params:
-  description: "veruu's blog"
+  description: "Is this a reaaal blog, is this just fantasyyyy"
   author: "Veronika Kabátová"
   contentTypeName: posts
   ShowShareButtons: false

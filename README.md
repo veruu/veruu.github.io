@@ -1,3 +1,3 @@
-# things
+# veruu.gitlab.io
 
-Is this a reaaal blog, is it just fantasyyyy
+Is this a reaaal blog, is this just fantasyyyy
