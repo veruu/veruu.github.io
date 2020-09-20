@@ -1,7 +1,7 @@
 ---
 title: "Simplify your git fork workflow with this easy hack"
 slug: "git-fork-hack"
-date: "2020-09-19"
+date: "2020-09-21"
 ---
 
 Okay so the title is a clickbait. This is not a hack, it's just about setting git
