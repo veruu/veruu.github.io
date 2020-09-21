@@ -14,12 +14,16 @@ become one of the [lucky ten thousand] and make your workflow less painful.
 
 So you decided to contribute to a project that lives on GitHub or GitLab. The
 typical setup here is to have the parent repo (to which you want to contribute)
-and your fork of the repo where your changes live before they are merged. You keep
-the parent and fork repos in sync and do all work in the fork. Easy, right? The
-elephant in the repo is that it's really easy to forget to update your fork with
-this flow. Get into the right directory, run `git pull`, create a new branch, do
-the work, submit the pull request... oops old conflicts because you forgot that
-you were working from your fork which was not updated!
+and your fork of the repo where your changes live before they are merged. You
+clone your fork to do all the work in and add the parent as a remote to be able
+to keep them in sync. Easy, right? The elephant in the repo is that it's really
+easy to forget to update your fork with this flow. Get into the right directory,
+run `git pull`, create a new branch, do the work, submit the pull request... oops
+you forgot to push into your fork when updating and now there are conflicts or
+you have to at least rebase!
+
+This happened to me way more often than I'd like even when I was already used to
+the flow. There had to be a better way.
 
 ## Harness the powers of `.git/config`
 
