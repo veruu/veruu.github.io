@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Naming Things Is Hard</title>
+    <link>https://veruu.github.io/posts/</link>
+    <description>Recent content in Posts on Naming Things Is Hard</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 21 Sep 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://veruu.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Simplify your git fork workflow with this easy hack</title>
+      <link>https://veruu.github.io/posts/git-fork-hack/</link>
+      <pubDate>Mon, 21 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://veruu.github.io/posts/git-fork-hack/</guid>
+      <description>Okay so the title is a clickbait. This is not a hack, it&amp;rsquo;s just about setting git configuration differently. However, a surprisingly small number of people knows about it, even within ones who consider themselves git experts. If you already know about this setup congratulations, you rock! If not, this is your chance to become one of the lucky ten thousand and make your workflow less painful.
+What&amp;rsquo;s the problem? So you decided to contribute to a project that lives on GitHub or GitLab.</description>
+    </item>
+    
+  </channel>
+</rss>
