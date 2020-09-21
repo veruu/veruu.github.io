@@ -1,5 +1,5 @@
 <!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><title>Simplify your git fork workflow with this easy hack - Naming Things Is Hard</title><meta name=description content="Okay so the title is a clickbait. This is not a hack, it&rsquo;s just about setting git configuration differently. However, a surprisingly small number of people knows about it, even within ones who consider themselves git experts. If you already know about this setup congratulations, you rock! If not, this is your chance to become one of the lucky ten thousand and make your workflow less painful.
-What&rsquo;s the problem? So you decided to contribute to a project that lives on GitHub or GitLab."><meta name=author content="Veronika Kabátová"><link rel=canonical href=https://veruu.github.io/posts/git-fork-hack/><link href=https://veruu.github.io/css/stylesheet.min.4581144a74632233912d1badb7cee91e143c7449a9eb20e8ccfc496d608675ac.css integrity="sha256-RYEUSnRjIjORLRutt87pHhQ8dEmp6yDozPxJbWCGdaw=" rel="preload stylesheet" as=style><link rel=apple-touch-icon href=https://veruu.github.io/apple-touch-icon.png><link rel=icon href=https://veruu.github.io/favicon.ico><meta name=generator content="Hugo 0.69.0"></head><body class="single dark" id=top><header class=header><nav class=nav><p class=logo><a href=https://veruu.github.io>Naming Things Is Hard</a></p></nav></header><main class=main><article class=post-single><header class=post-header><h1 class=post-title>Simplify your git fork workflow with this easy hack</h1><div class=post-meta><time>September 21, 2020</time>
+What&rsquo;s the problem? So you decided to contribute to a project that lives on GitHub or GitLab."><meta name=author content="Veronika Kabátová"><link rel=canonical href=https://veruu.github.io/posts/git-fork-hack/><link href=https://veruu.github.io/css/stylesheet.min.4581144a74632233912d1badb7cee91e143c7449a9eb20e8ccfc496d608675ac.css integrity="sha256-RYEUSnRjIjORLRutt87pHhQ8dEmp6yDozPxJbWCGdaw=" rel="preload stylesheet" as=style><link rel=apple-touch-icon href=https://veruu.github.io/apple-touch-icon.png><link rel=icon href=https://veruu.github.io/favicon.ico><meta name=generator content="Hugo 0.69.0"></head><body class="single dark" id=top><header class=header><nav class=nav><h1 class=logo><a href=https://veruu.github.io>Naming Things Is Hard</a></h1></nav></header><main class=main><article class=post-single><header class=post-header><h1 class=post-title>Simplify your git fork workflow with this easy hack</h1><div class=post-meta><time>September 21, 2020</time>
 . Veronika Kabátová
 . 3min read</div></header><div class=post-content><p>Okay so the title is a clickbait. This is not a hack, it&rsquo;s just about setting git
 configuration differently. However, a surprisingly small number of people knows
@@ -7,12 +7,14 @@ about it, even within ones who consider themselves git experts. If you already
 know about this setup congratulations, you rock! If not, this is your chance to
 become one of the <a href=https://xkcd.com/1053/>lucky ten thousand</a> and make your workflow less painful.</p><h2 id=whats-the-problem>What&rsquo;s the problem?</h2><p>So you decided to contribute to a project that lives on GitHub or GitLab. The
 typical setup here is to have the parent repo (to which you want to contribute)
-and your fork of the repo where your changes live before they are merged. You keep
-the parent and fork repos in sync and do all work in the fork. Easy, right? The
-elephant in the repo is that it&rsquo;s really easy to forget to update your fork with
-this flow. Get into the right directory, run <code>git pull</code>, create a new branch, do
-the work, submit the pull request&mldr; oops old conflicts because you forgot that
-you were working from your fork which was not updated!</p><h2 id=harness-the-powers-of-gitconfig>Harness the powers of <code>.git/config</code></h2><p><strong>Having to keep your fork in sync is a lie</strong>. The only case when you need it is
+and your fork of the repo where your changes live before they are merged. You
+clone your fork to do all the work in and add the parent as a remote to be able
+to keep them in sync. Easy, right? The elephant in the repo is that it&rsquo;s really
+easy to forget to update your fork with this flow. Get into the right directory,
+run <code>git pull</code>, create a new branch, do the work, submit the pull request&mldr; oops
+you forgot to push into your fork when updating and now there are conflicts or
+you have to at least rebase!</p><p>This happened to me way more often than I&rsquo;d like even when I was already used to
+the flow. There had to be a better way.</p><h2 id=harness-the-powers-of-gitconfig>Harness the powers of <code>.git/config</code></h2><p><strong>Having to keep your fork in sync is a lie</strong>. The only case when you need it is
 when you have other people working from <em>your fork</em> instead of the parent repo,
 which is a very specific use case irrelevant 99% of the time. Instead, you can
 work directly from the main branch of the parent repo, ignoring your fork&rsquo;s main
