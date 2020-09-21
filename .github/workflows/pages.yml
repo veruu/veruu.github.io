@@ -20,9 +20,7 @@ jobs:
           hugo-version: '0.69.0'
           extended: true
       - name: build
-        run: |
-          hugo --verbose --gc --minify
-          ls -la public
+        run: hugo --verbose --gc --minify
       - name: deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
