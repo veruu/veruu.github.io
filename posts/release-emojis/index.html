@@ -1,0 +1,61 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><title>Finding bugs and improving team culture by using emojis as release names 👀 - Naming Things Is Hard</title><meta name=description content="Our team uses emojis everywhere. I don&rsquo;t remember how it started but we eventually became known for pushing the boundaries and including emojis in emails to kernel developers. One of the activities we really enjoy is naming our releases in JIRA with fitting emojis. Some people recently expressed their opinions that we shouldn&rsquo;t be doing it, and it got me thinking. But not thinking about why they are right, the opposite."><meta name=author content="Veronika Kabátová"><link rel=canonical href=https://veruu.github.io/posts/release-emojis/><link href=https://veruu.github.io/css/stylesheet.min.4581144a74632233912d1badb7cee91e143c7449a9eb20e8ccfc496d608675ac.css integrity="sha256-RYEUSnRjIjORLRutt87pHhQ8dEmp6yDozPxJbWCGdaw=" rel="preload stylesheet" as=style><link rel=apple-touch-icon href=https://veruu.github.io/apple-touch-icon.png><link rel=icon href=https://veruu.github.io/favicon.ico><meta name=generator content="Hugo 0.69.0"></head><body class="single dark" id=top><header class=header><nav class=nav><p class=logo><a href=https://veruu.github.io>Naming Things Is Hard</a></p></nav></header><main class=main><article class=post-single><header class=post-header><h1 class=post-title>Finding bugs and improving team culture by using emojis as release names 👀</h1><div class=post-meta><time>October 2, 2020</time>
+. Veronika Kabátová
+. 5min read</div></header><div class=post-content><p>Our team uses emojis everywhere. I don&rsquo;t remember how it started but we eventually became known for
+pushing the boundaries and <a href=https://lore.kernel.org/linux-arm-kernel/20200117111344.GC6144@willie-the-truck/>including emojis in emails to kernel developers</a>. One of the activities
+we really enjoy is naming our releases in JIRA with fitting emojis. Some people recently expressed their
+opinions that we <a href=https://i.kym-cdn.com/photos/images/newsfeed/001/044/247/297.png>shouldn&rsquo;t be doing it</a>, and it got me thinking. But not thinking about why they are
+right, the opposite. Thinking about the deeper reasons why <em>you</em> should do the same and start using
+emojis in places that are not private chat messages.</p><h2 id=finding-bugs->Finding bugs 🐞</h2><p>There&rsquo;s plenty of programs that don&rsquo;t handle unicode well. Some of the more famous bugs are crashing
+<a href=https://9to5mac.com/2018/02/15/messages-crashes-ios-11/>smartphones</a> but problems with <a href=https://jira.mongodb.org/browse/PYTHON-65>databases</a> and <a href=https://github.com/vapor/mysql-kit/issues/25>related tooling</a> are also very common. These issues
+can cause security problems such as <a href=https://talosintelligence.com/vulnerability_reports/TALOS-2016-0036>information leaks</a> or <a href=https://threats.kaspersky.com/en/vulnerability/KLA11246/>denials of service</a>. This may not sound
+like a big deal if the program in question is your pet project but the moment you include users or a
+public facing interface&mldr; [people can input anything] so you better handle it well.</p><p>By using unicode characters you can expose these bugs. Hopefully to report them and get them fixed.
+If not, you can at least detect those <a href=https://medium.com/@adamhooper/in-mysql-never-use-utf8-use-utf8mb4-11761243e434>more than 10 years old MySQL deployments</a> and avoid them.</p><h2 id=including-others->Including others 🤗</h2><p>The vast majority of world is not using pure ASCII. There are not only extensions to this set but
+also completely different alphabets. By making sure the tool handles unicode well you&rsquo;re including
+all those people by doing something that sounds trivial but is not &ndash; being able to <em>show their names</em>.</p><p>None of the foreign financial/tax/bank websites I used so far could handle my name. And it only
+contains one character that&rsquo;s in the extended ASCII set. It&rsquo;s not even unicode! I got it all. Sites
+complaining about &ldquo;illegal characters&rdquo; in the input (excuse me? how rude!). Sites quietly exchanging
+the affected letter for the famous empty square (□). Sites not allowing you to continue without telling
+you what the issue is. The kicker? Because of the seriousness of the topic all of the sites had big
+disclaimers about how you have to type your <strong>legal name as it&rsquo;s shown on your ID card</strong> or you&rsquo;ll
+face legal repercussions, yet none of them allowed you to actually do so! Let&rsquo;s not even get into the
+question of when some of those applications will finally find out Czechoslovakia hasn&rsquo;t existed for
+decades&mldr; As a bonus, so you don&rsquo;t think it&rsquo;s only English-centric sites, one of my coworkers got
+□ printed on his ID card by his own government!</p><p>Of course this is not only about names but any other input as well. Similarly to names, addresses are
+a common problem. Or imagine a small company in a non-English speaking country with local customers,
+why should they be forced to misspell their product or release names? If you are a product owner,
+fixing language issues can also get you more customers from markets you&rsquo;d have missed otherwise!</p><p>But let&rsquo;s back to the names for a bit longer. There&rsquo;s even <a href=https://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/>a list of falsehoods programmers believe about names</a>!
+People are making <a href=https://ep2020.europython.eu/talks/9ToYwpp-your-name-is-invalid/>talks at well-known conferences about it</a>! This topic is not entertaining, it&rsquo;s
+<em><strong>dehumanizing.</strong></em> If pushing for emojis means people will eventually be able to use their names
+properly, I&rsquo;m taking the chance. I gave up years ago and use the ASCII version of my name by default
+but I shouldn&rsquo;t have to do that and neither should others.</p><p><em>Plenty of places preach inclusion. How many of them have deployments that don&rsquo;t even let all of
+their employees use their names because it&rsquo;s &ldquo;too much work&rdquo;?</em> <em><strong>Force them to be better</strong></em>.</p><h2 id=sense-of-belonging-and-productivity->Sense of belonging and productivity 🥰</h2><p>Picking emojis is a seemingly lightweight activity which gives people a little bit of mental break.
+Emojis are also considered fun and childish (insert another &ldquo;old man yells at cloud&rdquo; meme here) which
+enforces the statement even more.</p><p>The emojis are not chosen randomly but as a reflection on what happened since the last release.
+This forces people to think about the achievements and struggles of the whole team and not only
+themselves. It&rsquo;s almost like a small per-sprint retrospective but for free without an actual
+retrospective! It makes you more aware about the experience of other team members, potentially also
+giving you ideas about what you can help with or what needs to be solved in the near future (again
+for free without the extra meeting!). For example, most of the team members were dealing with the
+fallout of broken infrastructure? &ldquo;🔥🚒&rdquo; is a good release name candidate. We all did a lot of cleanup
+tasks and participated in Linux Plumbers conference? Everyone wanted a bathroom-related emoji and
+thus we ended up with a combination of &ldquo;🔧🚽🛁🚿&rdquo;. Try to find a scheme that reflects on team events
+and experiences!</p><p>Doing something together that&rsquo;s far from the actual workload makes teams happier, closer and more
+productive. Why? Because it shows the humans and their personalities and by getting to know people
+better you also respect them more and trust them more. That means people are more inclined to
+voice their ideas and concerns - and other team members respect the feedback more - and <em>that</em> makes
+the product better!</p><h2 id=quick-notes-on-accessibility->Quick notes on accessibility 🦯</h2><p>Unicode characters can break screen readers or make reading the characters very annoying. There&rsquo;s
+a good example of how the special characters looking like formatted text sound <a href=https://twitter.com/kentcdodds/status/1083080784682995712>on Twitter</a>. If a
+random text is mixed up with these characters - or emojis - reading the text can be a real pain;
+especially if you&rsquo;re trying to convey useful information hidden after the characters or using the
+visual shape of the characters instead of letters. Please be mindful of people using screen readers
+and follow <a href=https://blog.easterseals.com/emojis-and-accessibility-the-dos-and-donts-of-including-emojis-in-texts-and-emails/>the emoji etiquette for accessibility</a> in your everyday life as well. If done well, the
+emoji usage in releases complies with the etiquette as the emojis are in predictable places and can
+be skipped as they don&rsquo;t convey any useful information. Most importantly, if you have a team member
+using screen readers, listen to them and their experience rather than a random person on the internet.</p></div><footer class=post-footer></footer></article></main><footer class=footer><span>&copy; 2020 <a href=https://veruu.github.io>Naming Things Is Hard</a></span>
+<span>&#183;</span>
+<span>Powered by <a href=https://gohugo.io/ rel=noopener target=_blank>Hugo️️</a>️</span>
+<span>&#183;</span>
+<span>Theme️ <a href=https://github.com/adityatelange/hugo-PaperMod rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top"><button class=top-link id=top-link type=button><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6"><path d="M12 6H0l6-6z" /></svg></button></a>
+<script src=https://veruu.github.io/js/highlight.min.min.e7afc2928c0925d65c4732dfebe147014d91299a98e819e4b42f25c4fa68e91c.js integrity="sha256-56/CkowJJdZcRzLf6+FHAU2RKZqY6BnktC8lxPpo6Rw="></script><script>window.onload=function(){if(localStorage.getItem("menu-scroll-position")){document.getElementById('menu').scrollLeft=localStorage.getItem("menu-scroll-position");}}
+hljs.initHighlightingOnLoad();document.querySelectorAll('a[href^="#"]').forEach(anchor=>{anchor.addEventListener("click",function(e){e.preventDefault();document.querySelector(this.getAttribute("href")).scrollIntoView({behavior:"smooth"});});});var mybutton=document.getElementById("top-link");window.onscroll=function(){if(document.body.scrollTop>800||document.documentElement.scrollTop>800){mybutton.style.visibility="visible";mybutton.style.opacity="1";}else{mybutton.style.visibility="hidden";mybutton.style.opacity="0";}};function menu_on_scroll(){localStorage.setItem("menu-scroll-position",document.getElementById('menu').scrollLeft);}</script></body></html>
